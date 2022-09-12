@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="shortcut icon" href= "fotos/favicon.ico">
+<style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            height: 150vh;
+        }
+        #logo{
+            position: absolute;
+            top: 2%;
+            left: 2%;
+        }
+        #entra{
+            font: 25px "Netflix Sans";
+            position: absolute;
+            left: 91.5%;
+            top: 5%;
+            text-decoration: none;
+            color: black;
+        }
+        #entra:hover{
+            text-decoration: underline;
+        }
+        .linha{
+           background: gainsboro;
+           height: 1px;
+           position: relative;
+           top: 90px;
+        }
+       span{
+           position: absolute;
+           top: 20%;
+           left: 14%;
+           font: 13px "Netflix Sans","Helvetica Neue","helvetica";
+        }
+       .titulo{
+           position: absolute;
+           top: 23.5%;
+           left: 13.5%;
+           font: 32px "Netflix Sans","Helvetica Neue","helvetica";
+        }
+       .linha-1{
+           position: absolute;
+           top: 31.7%;
+           left: 16%;
+           font: 18px "Netflix Sans","Helvetica Neue","helvetica";
+           color: #333;
+        }
+        #linha-1{
+        position: absolute;
+        top: 31%;
+        left: 13%;
+        }
+       .linha-2{
+        position: absolute;
+        top: 37%;
+        left: 16%;
+        font: 18px "Netflix Sans","Helvetica Neue","helvetica";
+        color: #333;
+        }
+        #linha-2{
+        position: absolute;
+        top: 36.1%;
+        left: 13%;
+        }
+        .linha-3{
+        position: absolute;
+        top: 42%;
+        left: 16%;
+        font: 18px "Netflix Sans","Helvetica Neue","helvetica";
+        color: #333;
+        }
+        #linha-3{
+        position: absolute;
+        top: 41.2%;
+        left: 13%;
+        }
+/* <conteudo2> */       
+       #basico{
+        position: absolute;
+        top: 48.5%;
+        left: 45%;
+        height: 80px;
+        width: 120px;
+        padding: 47px 30px 65px 30px;
+        background: #e0454d;
+        color: white;
+        font: 18px "Netflix Sans","Helvetica Neue","helvetica";
+        border: none;
+        cursor: pointer;
+       }
+       .basico-itens{
+        position: absolute;
+        top: 64.5%;
+        left: 49%;
+        display: none;
+       }
+       #padrao{
+        position: absolute;
+        top: 48.5%;
+        left: 60%;
+        height: 80px;
+        width: 120px;
+        padding: 47px 30px 65px 30px;
+        background: #e0454d;
+        color: white;
+        font: 18px "Netflix Sans","Helvetica Neue","helvetica";
+        border: none;
+        cursor: pointer;
+       }
+       .padrao-itens{
+        position: absolute;
+        top: 64.5%;
+        left: 64%;
+        display: none;
+       }      
+       #premium{
+        position: absolute;
+        top: 48.5%;
+        left: 75%;
+        height: 80px;
+        width: 120px;
+        padding: 47px 30px 65px 25px;
+        background: red;
+        color: white;
+        font: 16px "Netflix Sans","Helvetica Neue","helvetica";
+        border: none;
+        cursor: pointer;
+       }
+       .premium-itens{
+        position: absolute;
+        top: 64.5%;
+        left: 79%;
+       }
+       .linha-01{
+        position: absolute;
+        top: 71%;
+        left: 13%;
+        font: 16px "Netflix Sans","Helvetica Neue","helvetica";
+        color: #737373;
+       }
+       #preco-01{
+        position: absolute;
+        top: 71%;
+        left: 47.5%;
+        font: 16px "Netflix Sans","Helvetica Neue","helvetica";
+        color: #737373;
+       }
+       #preco-02{
+        position: absolute;
+        top: 71%;
+        left: 62.5%;
+        font: 16px "Netflix Sans","Helvetica Neue","helvetica";
+        color: #737373;
+       }
+       #preco-03{
+        position: absolute;
+        top: 71%;
+        left: 77.5%;
+        font: 16px "Netflix Sans","Helvetica Neue","helvetica";
+        color: red;
+       }
+       .l01{
+        position: absolute;
+        top: 77%;
+        left: 11%;
+        width: 1000px;
+       }
+       .linha-02{
+        position: absolute;
+        top: 81%;
+        left: 12.7%;
+        font: 16px "Netflix Sans","Helvetica Neue","helvetica";
+        color: #737373;
+       }
+       #quali-01{
+        position: absolute;
+        top: 81%;
+        left: 48.5%;
+        font: 16px "Netflix Sans","Helvetica Neue","helvetica";
+        color: #737373;
+       }
+       #quali-02{
+        position: absolute;
+        top: 81%;
+        left: 63%;
+        font: 16px "Netflix Sans","Helvetica Neue","helvetica";
+        color: #737373;
+       }
+       #quali-03{
+        position: absolute;
+        top: 81%;
+        left: 77.5%;
+        font: 16px "Netflix Sans","Helvetica Neue","helvetica";
+        color: red;
+       }
+       .l02{
+        position: absolute;
+        top: 87%;
+        left: 11%;
+        width: 1000px;
+       }
+       .linha-03{
+        position: absolute;
+        top: 90%;
+        left: 12.7%;
+        font: 16px "Netflix Sans","Helvetica Neue","helvetica";
+        color: #737373;
+       }
+       #resul-01{
+        position: absolute;
+        top: 90%;
+        left: 48.5%;
+        font: 16px "Netflix Sans","Helvetica Neue","helvetica";
+        color: #737373;
+       }
+       #resul-02{
+        position: absolute;
+        top: 90%;
+        left: 63%;
+        font: 16px "Netflix Sans","Helvetica Neue","helvetica";
+        color: #737373;
+       }
+       #resul-03{
+        position: absolute;
+        top: 90%;
+        left: 77.5%;
+        font: 16px "Netflix Sans","Helvetica Neue","helvetica";
+        color: red;
+       }
+       .l03{
+        position: absolute;
+        top: 96%;
+        left: 11%;
+        width: 1000px;
+       }
+       .linha-04{
+        position: absolute;
+        top: 100%;
+        left: 12.7%;
+        font: 16px "Netflix Sans","Helvetica Neue","helvetica";
+        color: #737373;
+       }
+       #ver-01{
+        position: absolute;
+        top: 98.5%;
+        left: 48.5%;
+       }
+       #ver-11{
+        position: absolute;
+        top: 98.5%;
+        left: 48.5%;
+        display: none;
+       }
+       #ver-02{
+        position: absolute;
+        top: 98.5%;
+        left: 63%;
+       }
+       #ver-12{
+        position: absolute;
+        top: 98.5%;
+        left: 63%;
+        display: none;
+       }
+       #ver-03{
+        position: absolute;
+        top: 98.5%;
+        left: 78.5%;
+       }
+       #ver-13{
+        position: absolute;
+        top: 98.5%;
+        left: 78.5%;
+        display: none;
+       }
+       .texto{
+        position: absolute;
+        top: 110%;
+        left: 12.5%;
+        color: #737373;
+        font: 13px "Netflix Sans","Helvetica Neue","helvetica";
+        }
+        .texto>a{
+            color: #0071EB;
+            text-decoration: none;
+        }
+        .texto>a:hover{
+            text-decoration: underline;
+        }
+        #buttonB{
+            position: absolute;
+            top: 130%;
+            left: 36%;
+            background: red;
+            color: white;
+            padding: 20px 200px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font: 20px "Netflix Sans","Helvetica Neue","helvetica" ;
+            display: none;
+         }
+         #buttonB:hover{
+            background: rgb(255, 58, 58);
+         }
+         #buttonP{
+            position: absolute;
+            top: 130%;
+            left: 36%;
+            background: red;
+            color: white;
+            padding: 20px 200px 20px ;
+            text-decoration: none;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font: 20px "Netflix Sans","Helvetica Neue","helvetica";   
+            display: none;
+         }
+         #buttonP:hover{
+            background: rgb(255, 58, 58);
+         }
+         #buttonPR{
+            position: absolute;
+            top: 130%;
+            left: 36%;
+            background: red;
+            color: white;
+            padding: 20px 200px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font: 20px "Netflix Sans","Helvetica Neue","helvetica";    
+         }            
+         #buttonPR:hover{
+            background: rgb(255, 58, 58);
+         }
+</style>
+
+</head>
+<body>
+<div class="topo">
+    <a id="logo" href="#"><img src="fotos/netflixlogo.png" alt=" " width="167" height="57"></a>
+    <a id="entra" href="index.html">Sair</a>
+</div> 
+
+<div
+     class="linha">
+</div>
+    
+<div class="conteudo">
+    <span>PASSO <strong>3</strong> DE <strong>3</strong></span>
+        <h1 class="titulo"><strong>Escolha o melhor plano para você</strong></h1>
+            <p class="linha-1">Assista o quanto quiser. Sem anúncios.</p>
+                <img id="linha-1" src="fotos/verificação1.png" alt=" " width="30">
+                <p class="linha-2">Recomendações especiais para você.</p>
+            <img id="linha-2" src="fotos/verificação1.png" alt=" " width="30">
+        <p class="linha-3">Altere ou cancele seu plano quando quiser.</p>
+    <img id="linha-3" src="fotos/verificação1.png" alt=" " width="30">
+</div>
+    
+<div class="conteudo2">
+        <button id="basico">Básico</button>
+    <img class="basico-itens" src="fotos/triangulo2.png" alt=" " width="20">
+        <button id="padrao">Padrão</button>
+    <img class="padrao-itens" src="fotos/triangulo2.png" alt=" " width="20">
+        <button id="premium">Premium</button>
+    <img class="premium-itens" src="fotos/triangulo2.png" alt=" " width="20">
+        
+    <p class="linha-01"><strong>Preço por mês</strong></p>
+            <p id="preco-01">R$25,90</p>
+                <p id="preco-02">R$39,90</p>
+                    <p id="preco-03">R$55,90</p>
+                        <hr class="l01">
+    <p class="linha-02"><strong> Qualidade do vídeo</strong></p>
+            <p id="quali-01">Boa</p>
+                <p id="quali-02">Melhor</p>
+                    <p id="quali-03">Superior</p>
+                        <hr class="l02">
+    <p class="linha-03"><strong>Resolução</strong></p>
+            <p id="resul-01">480p</p>
+                <p id="resul-02">1080p</p>
+                    <p id="resul-03">4K+HDR</p>
+                        <hr class="l03">
+    <p class="linha-04"><strong>Assista na TV, computador, celular ou tablet</strong></p>
+            <img id="ver-01" src="fotos/selecionado.png" alt=" " width="40">
+                <img id="ver-11" src="fotos/verificação1.png" alt=" " width="40">
+                    <img id="ver-02" src="fotos/selecionado.png" alt=" " width="40">
+                        <img id="ver-12" src="fotos/verificação1.png" alt=" " width="40">
+                            <img id="ver-03" src="fotos/verificação1.png" alt=" " width="40">
+                                <img id="ver-13" src="fotos/selecionado.png" alt=" " width="40">
+        <p class="texto">A disponibilidade das opções HD (720p), Full HD (1080p), Ultra HD (4K) e HDR está sujeita ao serviço de internet e à funcionalidade <br>do aparelho. Nem todo conteúdo está disponível em todas as resoluções. Para obter mais detalhes, consulte os nossos <a href="https://help.netflix.com/legal/termsofuse">Termos de <br>uso</a>.<br><br>
+            Somente as pessoas que moram com você podem usar sua conta. Assista em 4 aparelhos ao mesmo tempo com o plano Premium, <br> em 2 aparelhos com o plano Padrão e em 1 com o plano Básico.</p>
+            <a id="buttonB">Próximo </a>
+                <a id="buttonP">Próximo<a>
+                    <a id="buttonPR">Próximo</a>
+</div>
+<script src="tela_de_cadastro2.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+

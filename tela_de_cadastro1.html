@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="shortcut icon" href= "fotos/favicon.ico">
+    <style>
+        #logo{
+            position: absolute;
+            top: 2%;
+            left: 2%;
+        }
+        #entra{
+            font: 25px "Netflix Sans";
+            position: absolute;
+            left: 91.5%;
+            top: 5%;
+            text-decoration: none;
+            color: black;
+        }
+        #entra:hover{
+            text-decoration: underline;
+        }
+        .linha{
+           background: gainsboro;
+           height: 1px;
+           position: relative;
+           top: 90px;
+        }
+        #fotoSelo{
+           position: absolute;
+           left: 50%;
+           top: 30%;    
+        }
+        span{
+           position: absolute;
+           top: 43%;
+           left: 48%;
+        }
+        h1{
+           position: absolute;
+           top: 44%;
+           left: 41.5%;
+           font: 30px "Netflix Sans","Helvetica Neue","helvetica";
+        }
+        .linha-1{
+           position: absolute;
+           top: 54%;
+           left: 44.5%;
+           font: 18px "Netflix Sans","Helvetica Neue","helvetica";
+        }
+        #linha-1{
+           position: absolute;
+           top:55.5%;
+           left:40%;
+        }    
+        .linha-2{
+           position: absolute;
+           top: 63%;
+           left: 44.5%;
+           font: 18px "Netflix Sans","Helvetica Neue","helvetica";
+        }
+        #linha-2{
+        position: absolute;
+           top:64.5%;
+           left:40%;
+        }
+        .linha-3{
+           position: absolute;
+           top: 72%;
+           left: 44.5%;
+           font: 18px "Netflix Sans","Helvetica Neue","helvetica";
+        }
+       #linha-3{
+        position: absolute;
+        top:73.5%;
+        left:40%;
+        }
+        #button{
+            position: absolute;
+            top: 85%;
+            left: 38.5%;
+            background: red;
+            color: white;
+            padding: 20px;
+            width: 350px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font: 20px "Netflix Sans","Helvetica Neue","helvetica" ;
+        }
+        #button:hover{
+            background: rgb(255, 58, 58);
+        }
+    </style>
+</head>
+<body>
+<div class="topo">
+     <a id="logo" href="#"><img src="fotos/netflixlogo.png" alt=" " width="167" height="57"></a>
+    <a id="entra" href="index.html">Sair</a>
+</div>   
+
+<div
+    class="linha">
+</div>
+
+<div class="conteudo">
+    <img id="fotoSelo" src="fotos/Checkmark.png" alt=" " width="50">
+        <span>PASSO 2 DE 3</span>
+            <h1><strong>Escolha seu plano.</strong></h1>
+                <p class="linha-1">Sem compromisso, cancele <br>quando quiser.</p>
+            <img id="linha-1" src="fotos/verificação1.png" alt=" " width="40">
+                <p class="linha-2">Todo o conteúdo da Netflix por <br>um preço único e acessível.</p>
+            <img id="linha-2" src="fotos/verificação1.png" alt=" " width="40">
+                <p class="linha-3">Assista o quanto quiser em <br>todos os seus aparelhos.</p>
+        <img id="linha-3" src="fotos/verificação1.png" alt=" " width="40">
+    <button id="button">Próximo</button>
+</div>
+
+<script>
+    var button = document.querySelector('#button')
+        button.addEventListener('click', () =>{
+            window.location.replace('tela_de_cadastro2.html')
+        })
+</script>
+
+</body>
+</html>

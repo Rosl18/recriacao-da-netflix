@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Brasil - assistir séries online, assistir filmes online</title>
+    <link rel="shortcut icon" href="fotos/favicon.ico"/>
+<style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-image: url(fotos/tela\ de\ fundo\ \(netflix\).jpg);
+            background-repeat: no-repeat;
+            background-size: 1280px;
+            background-position-y: -30px;
+            height: auto;
+            width: auto;
+        }
+        .gradient{
+            background: rgba(0, 0, 0, 0.4);
+            background-image: linear-gradient(
+             to top,
+             rgba(0, 0, 0, 0.8) 0,
+             rgba(0, 0, 0, 0) 60%,
+             rgba(0, 0, 0, 0.8) 100%
+            ); 
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+        .topo{
+            width: auto;
+            height: auto;
+        }
+        #logo{
+            z-index: 90;
+            position: relative;
+            top: 20px;
+            left: 20px;
+        }
+        #entra{
+            z-index: 90;
+            position: absolute;
+            left: 92%;
+            top: 4%;
+            display: inline-block;
+            background: #e50914;
+            color: white;
+            align-self: flex-start;
+            padding: 8px 18px;
+            text-decoration: none;
+            border-radius: 3px;
+        }
+        .conteudo{
+            width: auto;
+            height: auto;
+        }
+        .conteudo>h1{
+            color: #fff;
+            z-index: 90;
+            text-align: center;
+            position: relative;
+            top: 140px;
+            font-size: 60px
+        }
+        .conteudo>h2{
+            color: #fff;
+            z-index: 90;
+            text-align: center;
+            position: relative;
+            top: 150px;
+        }
+        .conteudo>h3{
+            color: white;
+            z-index: 1;
+            text-align: center;
+            position: relative;
+            top: 170px;
+        }
+
+        .inputs {
+            display: grid;
+            grid-template-columns: 400px 180px;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            z-index: 90;
+            position: absolute;
+            top: 60%;
+            left: 28%;
+            width: auto;
+            height: auto;
+        }
+        .inputs input {
+            padding: 20px 10px;
+            font-size: 18px;
+            font-family: sans-serif;
+        }
+        #button {
+            background: #e50914;
+            outline: none;
+            border: none;
+            color: white;
+            font-size: 30px;
+            text-transform: uppercase;
+            cursor: pointer;
+            text-decoration: none;
+            padding: 11px;
+        }
+</style>
+</head>
+<body>
+           
+<div class="topo">
+        <a href="#"><img id="logo" src="fotos/netflixlogo.png" alt=" " width="200"></a>
+        <a href="login.html" id="entra">Entrar</a>    
+</div>    
+<div class="conteudo">
+        <h1>Filmes, séries e muito <br> mais. Sem limites.</h1>
+        <h2>Assista onde quiser. Cancele quando quiser.</h2>
+        <h3>  Pronto para assistir? Informe seu email para criar ou reiniciar sua
+            assinatura.</h3>
+</div>
+
+<form class="inputs">
+    <input type="text" placeholder="Email" />
+    <a id="button" href="tela_de_cadastro.html">Vamos lá</a>
+</form>
+  
+<div class="gradient"></div>
+
+</body>
+</html>

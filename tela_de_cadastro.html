@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="shortcut icon" href= "fotos/favicon.ico">
+
+<style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #logo{
+            position: absolute;
+            top: 2%;
+            left: 2%;
+        }
+        #entra{
+            font: 25px "Netflix Sans";
+            position: absolute;
+            left: 92%;
+            top: 4.5%;
+            text-decoration: none;
+            color: black;
+        }
+        #entra:hover{
+            text-decoration: underline;
+        }
+        .linha{
+           background: gainsboro;
+           height: 1px;
+           position: relative;
+           top: 90px;
+        }
+        span{
+            position: absolute;
+            left: 35%;
+            top: 21%;
+        }
+        .conteudo>h1{
+            position: absolute;
+            left: 35%;
+            top: 25%;
+            font: 37px "Netflix Sans","Helvetica Neue","helvetica";
+        }
+        .conteudo>p{
+            position: absolute;
+            left: 35%;
+            top: 40%;
+            font: 19px "Netflix Sans","Helvetica Neue","helvetica";
+        }
+        .textfloat{
+            position: relative;
+            top: 250px;
+            left: 450px;
+            padding-top: 13px;
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
+        .textfloat > input{
+            height: 50px;
+            width: 350px;
+            color: #333;
+            background-color: #fff;
+            border: 1px solid #605E5C;
+            border-radius: 5px;
+            padding-left: 15px;
+            box-sizing: border-box;
+            outline: none;
+        }
+        .textfloat > label{
+            color: #333;
+            pointer-events: none;
+            font-size: 20px;
+            position: absolute;
+            top: 12px;
+            left: 5px;
+            margin-top: 13px;
+            transition: all .3s ease-out;
+        } 
+        .textfloat >input:focus + label,
+        .textfloat >input:valid + label{
+            font-size: 20px;
+            margin-top:-22px ;
+            color: #333;
+        }
+         #label-senha,#senha{
+            position: absolute;
+            top: -250%;
+        }
+        #button{
+            position: absolute;
+            top: 72%;
+            left: 35%;
+            background: red;
+            color: white;
+            padding: 20px;
+            width: 350px;
+            border: none;
+            cursor: pointer;
+            font: 20px "Netflix Sans","Helvetica Neue","helvetica" ;
+            display: none;    
+        }
+        #button:hover{
+            background: rgb(255, 58, 58);
+        }
+        #label-confir_senha,#confir-senha{
+            position: absolute;
+            top: -240%;   
+        }
+        #botao{
+            position: absolute;
+            top: 90%;
+            left: 49%;
+            transform: translate(-50%,-50%);
+            background: red;
+            color: white;
+            padding: 20px;
+            width: 350px;
+            border: none;
+            cursor: pointer;
+            font: 20px "Netflix Sans","Helvetica Neue","helvetica";     
+        }  
+</style>
+
+</head>
+<body>
+<div class="topo">
+    <a id="logo" href="#"><img src="fotos/netflixlogo.png" alt=" " width="167" height="57"></a>
+    <a id="entra" href="index.html">Sair</a>
+</div> 
+
+<div
+    class="linha">
+</div>
+
+<div class="conteudo">
+    <span>PASSO 1 DE 3</span>
+        <h1>Crie uma senha para iniciar <br> sua assinatura</h1>
+            <p>Faltam só mais alguns passos!</p>
+    <div class="textfloat">
+            <input type="text" id="nome" placeholder=" " required>
+            <label id="label-nome" for="email">Digite o seu e-mail</label>
+    </div>        
+    <div class="textfloat">
+            <input type="password" id="senha" placeholder=" " required >
+            <label id="label-senha" for="senha">Adicione uma Senha</label>
+    </div>   
+    <div class="textfloat">
+            <input type="password" id="confir-senha" placeholder=" " required >
+            <label id="label-confir_senha" for="confir-senha">Confirme a Senha</label>
+    </div>    
+           <button id="button">Próximo</button>
+           <button id="botao">Próximo</button>                 
+</div >         
+                           
+<script>
+    var nome = document.querySelector('#nome')
+    var labelNome = document.querySelector('#label-nome')
+    validNome = true
+    var senha = document.querySelector('#senha')
+    var labelSenha = document.querySelector('#label-senha')
+    validSenha = false
+    var confirSenha = document.querySelector('#confir-senha')
+    var labelConfir_senha = document.querySelector('#label-confir_senha')
+    validConfir = false
+    var botao = document.querySelector('#botao')
+    var button = document.querySelector('#button')
+        senha.addEventListener('keyup',() =>{
+            if(senha.value.length <=7){
+                senha.setAttribute('style','border-color : red')
+                labelSenha.setAttribute('style','color : red')
+                labelSenha.innerHTML = 'minimo 8 caracter.'
+                validSenha = false
+            }else if(senha.value.length >= 8){
+                senha.setAttribute('style', 'border-color : green')
+                labelSenha.setAttribute('style','color : green')
+                labelSenha.innerHTML = 'Senha'
+                validSenha = true
+            }
+        })  
+        confirSenha.addEventListener('keyup', () =>{
+            if(senha.value != confirSenha.value){
+                confirSenha.setAttribute('style', 'border-color : red')
+                labelConfir_senha.setAttribute('style','color : red')
+                validConfir = false
+            }else {
+                confirSenha.setAttribute('style','border-color : green')
+                labelConfir_senha.setAttribute('style', 'color : green')
+                validConfir = true
+            }
+        })
+        botao.addEventListener('click', () =>{
+            if (validNome && validSenha && validConfir){
+                let confirmacao = window.confirm('Deseja prosseguir?')
+                    if(confirmacao){
+                        window.location.replace('tela_de_cadastro1.html')
+                    }else{
+             
+                    }
+            }else{
+            alert('Preencha corretamente todos os campos.')
+            }
+        }) 
+</script>                
+              
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="shortcut icon" href= "fotos/favicon.ico">
+
+<style> 
+        *{
+            margin: 0;
+            padding: 0;
+        } 
+        #logo{
+            position: absolute;
+            top: 2%;
+            left: 2%;
+        }
+        #entra{
+            font: 25px "Netflix Sans";
+            position: absolute;
+            left: 91.5%;
+            top: 5%;
+            text-decoration: none;
+            color: black;
+        }
+        #entra:hover{
+            text-decoration: underline;
+        }
+        .linha{
+           background: gainsboro;
+           height: 1px;
+           position: relative;
+           top: 90px;
+        }
+        #lock{
+           position: absolute;
+           left: 50%;
+           top: 30%;
+        }         
+        .fotoLock{
+            position: absolute;
+           left: 48%;
+           top: 40%;
+        }
+        .titulo{
+            position: absolute;
+            left: 36%;
+            top: 45%;
+        }
+        .texto{
+            position: absolute;
+            left: 45%;
+            top: 54%;
+            text-align: justify;
+            font: 18px "Netflix Sans","Helvetica Neue","helvetica" 
+        }
+        #card{
+            position: absolute;
+            left: 38%;
+            top: 80%;
+            border: 2px solid rgba(128, 128, 128, 0.356);
+            width: 350px;
+            height: 75px;
+            cursor: pointer;
+        }        
+        .pix{
+            position: relative;
+            left: 4%;
+            top: 7%;
+            font: 14px "Netflix Sans","Helvetica Neue","helvetica" 
+        } 
+        .idPix{
+            position: relative;
+            left: 20px;
+            top:13px; 
+        } 
+        .seta{
+            position: relative;
+            left: 250px;
+            top: 5px; 
+        }
+</style>
+
+</head>
+<body>
+ 
+<div class="topo">
+    <a id="logo" href="#"><img src="fotos/netflixlogo.png" alt=" " width="167" height="57"></a>
+    <a id="entra" href="tela_de_cadastro2.html">Voltar</a>
+    <div
+        class="linha">
+    </div>
+</div> 
+<div class="conteudo">
+    <img id="lock" src="fotos/Lock.png" alt=" " width="45">
+    <span class="fotoLock"> PASSO <strong>3</strong>  DE <strong>3</strong> </span>
+    <h1 class="titulo"><strong>Informe os dados de pagamento</strong></h1>
+    <p class="texto">
+        Sua assinatura começa <br> 
+        &nbsp; &nbsp; &nbsp; &nbsp;assim que você <br> 
+        configurar o pagamento.
+        <br><br>
+        <strong>                
+          &nbsp; &nbsp; Sem compromisso.<br>
+            Cancele online quando<br>
+            &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;quiser.
+        </strong>
+    </p>
+
+<div id="card">
+    <p class="pix"><strong>Pagamento via Pix</strong></p>
+    <img class="idPix" src="fotos/logoPix.png" alt=" " width="60">
+    <img class="seta" src="fotos/chevron.svg" alt=" " width="35">
+</div>
+
+<script>
+    var card = document.querySelector('#card')
+        card.addEventListener('click',() =>{
+            setTimeout(() => {
+                window.location.replace('tela_de_pagamento1.html')
+            })
+        })
+</script>
+  
+</body>
+</html>

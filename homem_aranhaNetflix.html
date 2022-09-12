@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="shortcut icon" href= "fotos/favicon.ico">
+    <style>
+
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        background-image: url(fotos/homem_aranha_telaDeFundo.jpeg);
+        background-size: 1270px;
+        background-position-x: 4.5px;
+        background-repeat: no-repeat;
+    }
+    .gradient{
+        background: rgba(0, 0, 0, 0.2);
+        background-image: linear-gradient(
+            to left,
+            rgba(0, 0, 0, 0.8) 0,
+            rgba(0, 0, 0, 0) 60%,
+            rgba(0, 0, 0, 0.8) 100%
+        ); 
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    .logo{
+        z-index: 90;
+        position: absolute;
+        top: 2%;
+        left: 2%;
+        cursor: pointer;
+    }
+    .titulo{
+        z-index: 90;
+        position: absolute;
+        top: 20%;
+        left: 5%;
+        color: white;
+        font: 40px "Netflix Sans","Helvetica Neue","helvetica";
+    }
+    .texto{
+        z-index: 90;
+        position: absolute;
+        top: 37%;
+        left: 5%;
+        color: white;
+    }
+    #assistir{
+        z-index: 90;
+        position: absolute;
+        top: 55%;
+        left: 6%;
+        width: 120px;
+        height: 30px;
+        padding: 10px 10px 30px 30px;
+        font: 15px "Netflix Sans","Helvetica Neue","helvetica";
+        background: transparent;
+        border: 1px solid white;
+        color: white;
+        cursor: pointer;
+        transition: 0.4s;
+    }
+    #assistir:hover{
+        background: white;
+        color: black;
+    }
+    .iconsPlay{
+        z-index: 90 ;
+        position: absolute;
+        top: 55.7%;
+        left: 7%;
+    }
+    #trailer{
+        z-index: 90;
+        position: absolute;
+        top: 55%;
+        left: 16%;
+        width: 120px;
+        height: 30px;
+        padding: 10px 10px 30px 30px;
+        font: 15px "Netflix Sans","Helvetica Neue","helvetica";
+        background: transparent;
+        border: 1px solid white;
+        color: white;
+        cursor: pointer;
+        transition: 0.4s;
+    }
+    #trailer:hover{
+        background: white;
+        color: black;
+    }
+    .iconsTrailer{
+        z-index: 90 ;
+        position: absolute;
+        top: 55.7%;
+        left: 17%;
+    }
+    #logo-HA{
+        z-index: 90;
+        position: relative;
+        top: 20px;
+        right: 30px;
+        border-radius: 200px;
+        cursor: pointer;
+    }
+    .Seta-Baixo{
+        z-index: 90;
+        position: absolute;
+        left: 98%;
+        top: 4.2%;
+    }
+    #trailer-HA{
+        z-index: 90;
+        background: #000;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        display: none;
+    }
+    #btn-Fechar{ 
+        z-index: 90;
+        position: absolute;
+        top: 15%;
+        left: 78%;
+        cursor: pointer;
+        display: none;
+    }
+    .ClassIdade{
+        z-index: 90;
+        position: absolute;
+        top: 55%;
+        left: 90%;
+        color: white;
+        font: 20px Raleway;
+        background: #EDCB0C;
+        padding: 7px;
+        border-radius: 2px;
+        display: none;
+    }
+    .card{
+        z-index: 90;
+        background: black;
+        height: 250px;
+        width: 170px;
+        position: absolute;
+        top: 11%;
+        left: 83%;
+        border: 1px solid rgba(128, 128, 128, 0.493);
+        display: none;
+    } 
+    .card>hr{
+        position: absolute;
+        top: 80%;
+        width: 168px;
+        border-color: rgba(128, 128, 128, 0.493);
+    }
+    .setaParaCima{
+        z-index: 90;
+        position: absolute;
+        top: 9.9%;
+        left: 95%;
+        display: none;
+    }
+    .sairNetflix{
+        position: absolute;
+        top: 87%;
+        left: 6%;
+        width: 200px;
+        color: white;
+        cursor: pointer;
+        font: 13px "Netflix Sans","Helvetica Neue","helvetica";
+    }
+    .sairNetflix:hover{
+        text-decoration: underline;
+    }
+    #logo-USU{
+         position: absolute;
+        top: 5%;
+        left: 3%;
+    }
+    .logo-USU{
+        color: green;
+        font: 10px "Netflix Sans","Helvetica Neue","helvetica";
+        position: absolute;
+        left: 26%;
+        top: 5%;
+        cursor: pointer;
+    }
+    .logo-USU:hover{
+        text-decoration: underline;
+    }
+    #logo-NDUSU{
+        position: absolute;
+         top: 20%;
+        left: 3%;
+        border-radius: 50px;
+    }
+    .logo-NDUSU{
+        color: white;
+        font: 12px "Netflix Sans","Helvetica Neue","helvetica";
+        position: absolute;
+        top: 21%;
+        left: 23%;
+        cursor: pointer;
+    }
+    .logo-NDUSU:hover{
+        text-decoration: underline;
+    }
+</style>
+
+</head>
+<body>
+    
+<div class="conteudo">
+    <img class="logo" src="fotos/netflixlogo.png" alt=" " width="170">
+        <h1 class="titulo">Homem-Aranha: sem volta<br> pra casa</h1>
+            <p class="texto">Pela primeira vez na história cinematográfica do Homem-Aranha, nosso herói amigo da vizinhança é desmascarado e<br> não consegue mais separar sua vida normal dos grandes riscos de ser um super-herói. Quando ele pede ajuda ao <br>Doutor Estranho, os riscos se tornam ainda mais perigosos, e o forçam a descobrir o que realmente significa ser o <br>Homem-Aranha. Classificação indicativa 12 anos, contém violência.</p>
+            <button type="button" id="assistir">Assistir</button>
+                <img class="iconsPlay" src="fotos/Icone-Play.png" alt=" " width="30">
+            <button type="button" id="trailer">Trailer</button>
+                <img class="iconsTrailer" src="fotos/Icone-Play.png" alt=" " width="30">
+            <p class="ClassIdade"><b>12</b></p>
+</div>      
+
+<div class="usuarios">
+    <img id="logo-HA" src="fotos/logo_Homem-Aranha.jfif" width="35" height="30px" align="right">
+    <img class="Seta-Baixo" src="fotos/seta-Baixo - Copy.png" alt=" " width="12">
+</div> 
+    <img class="setaParaCima" src="fotos/seta-Baixo.png" alt=" " width="15">
+<div class="card">
+    <img id="logo-USU" src="fotos/logo_Homem-Aranha.jfif" alt=" " width="35">
+    <p class="logo-USU">Homem-Aranha sem volta <br>pra casa</p>
+    <img id="logo-NDUSU" src="fotos/needForSpeed.jpg" alt=" " width="25">
+    <p class="logo-NDUSU">Need For Speed - O filme</p>
+    <p class="sairNetflix"><b>Sair da Netflix</b></p>
+    <hr>
+</div>
+
+<div class="gradient"></div>
+
+<script>
+
+var trailer = document.querySelector('#trailer')
+    trailer.addEventListener('click', () =>{
+        trailer.setAttribute('style','background : green')
+            setTimeout(() =>{
+                window.location.replace('trailer-HA.html')
+            },1000)
+        })
+var setaParaCima = document.querySelector('.setaParaCima')
+var card = document.querySelector('.card')
+var logoHA = document.querySelector('#logo-HA')
+var menuopen = false;
+    logoHA.addEventListener('click',() => {
+        if(!menuopen) {
+            card.style.display = 'flex';
+            setaParaCima.style.display = 'flex'
+            menuopen = true;
+        } else{
+            card.style.display = 'none';
+            setaParaCima.style.display = 'none'
+         menuopen = false;
+        }
+    })
+
+var button_TEXTO = document.querySelector('.logo-NDUSU')
+    button_TEXTO.addEventListener('click',() =>{
+        setTimeout(() =>{
+            window.location.replace('need_for_speedNetflix.html')
+        })
+    })
+
+var button_SAIRNETFLIX = document.querySelector('.sairNetflix')
+    button_SAIRNETFLIX.addEventListener('click',() =>{
+        setTimeout(() =>{
+    window.location.replace('index.html')
+        })
+    })
+
+var assitir = document.querySelector('#assistir')
+    assitir.addEventListener('click', () =>{
+        var confirmacao = confirm('filme em Ingês, sem legenda. Deseja continuar?')
+            if(confirmacao){
+                setTimeout(() =>{
+                    window.location.replace('filme_HA.html')
+                },1000)
+            }else{
+            }
+    })
+</script>
+  
+</body>
+</html>

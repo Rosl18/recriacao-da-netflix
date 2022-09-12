@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="shortcut icon" href= "fotos/favicon.ico">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+        background-image: url(fotos/cartaz-de-need-for-speed.jpg);
+        background-size: 1270px;
+        background-position-x: 6px;
+        background-repeat: no-repeat;
+        }   
+        .gradient{
+            background: rgba(0, 0, 0, 0.2);
+                background-image: linear-gradient(
+                to left,
+                rgba(0, 0, 0, 0.8) 0,
+                rgba(0, 0, 0, 0) 0,
+                rgba(0, 0, 0, 0.8) 100%
+                ); 
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+        }
+        .trailer-ND{
+            z-index: 90;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        #Fechar{
+            z-index: 90;
+            position: absolute;
+            top: 10%;
+            left: 79%;
+            font:  25px "Netflix Sans","Helvetica Neue","helvetica";
+            color: black;
+            background: white;
+            padding: 5px 10px;
+            border-radius: 100px;
+            cursor: pointer;
+        }
+        </style>
+
+
+       
+</head>
+<body>
+
+    <iframe 
+    class="trailer-ND"
+    width="700" 
+    height="450" 
+    src="https://www.youtube.com/embed/9ADox0zXqd4" 
+    title="YouTube video player" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
+    picture-in-picture" 
+    allowfullscreen>
+    </iframe>
+    <p id="Fechar"><b>X</b></p>
+<div class="gradient"></div>
+
+<script>
+
+    var btnFechar = document.querySelector('#Fechar')
+    btnFechar.addEventListener('click', () =>{
+        btnFechar.setAttribute('style','color: green')
+            setTimeout(() =>{
+                window.location.replace('need_for_speedNetflix.html')  
+            },1000)
+    })       
+
+</script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="icon" href= "fotos/favicon.ico">
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            background-color: #191818;
+        }
+
+        .logo-netflix{
+            position: absolute;
+            top: 3%;
+            left: 2%;
+        }
+        .titulo{
+            color: white;
+            position: absolute;
+            top: 23.5%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            font: 30px "Netflix Sans","Helvetica Neue","helvetica";
+        }
+
+        #homemAranha{
+            position: absolute;
+            top: 35%;
+            left: 26%;
+            cursor: pointer; 
+        }
+        /* #homemAranha:hover{
+            border: 1px solid white;
+
+        } */
+        #homemAranhaT{
+            position: absolute;
+            top: 63.5%;
+            left: 26.5%;
+            color: white;
+            
+        }
+
+        #NeedSpeed{
+            position: absolute;
+            top: 35%;
+            left: 40%;
+            cursor: pointer; 
+        }
+        
+        #NeedSpeedT{
+            position: absolute;
+            top: 63.8%;
+            left: 40.8%;
+            color: white;
+        }
+        #sair{
+            font: 15px "Netflix Sans","Helvetica Neue","helvetica";
+            position: absolute;
+            left: 96%;
+            top: 3%;
+            text-decoration: none;
+            color: white;
+        }
+       #sair:hover{
+        text-decoration: underline;
+       }
+            
+      
+
+
+        
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    
+    <div class="topo">
+
+        <img class="logo-netflix" src="fotos/netflixlogo.png" alt=" " width="100">
+
+        <a href="index.html" id="sair">Sair</a   
+
+        
+        >
+
+
+    </div>
+
+
+    <div class="conteudo">
+        
+        <h1 class="titulo"><strong>O que você deseja assistir??</strong></h1>
+        
+        <img id="homemAranha" src="fotos/Homem aranha.jpg" alt=" " width="150">
+            <p id="homemAranhaT">Homem-Aranha sem <br>volta pra casa</p>
+        
+        <img id="NeedSpeed" src="fotos/needForSpeed.jpg" alt=" " width="130">
+            <p id="NeedSpeedT">Need For Speed</p>
+    
+    
+    
+    </div>
+
+
+<script>
+
+    var homemAranha = document.getElementById('homemAranha')
+    var homemAranhaT = document.getElementById('homemAranhaT')
+
+    homemAranha.addEventListener('mouseover', () =>{
+
+        homemAranha.setAttribute('style', 'border: 1px solid white')
+        homemAranhaT.setAttribute('style', 'text-decoration: underline')
+
+  })
+
+    homemAranha.addEventListener('mouseleave',() =>{
+    
+        homemAranha.setAttribute('style', 'border: none')
+        homemAranhaT.setAttribute('style', 'text-decoration: none')
+        
+  })
+
+  homemAranha.addEventListener('click',()=>{
+    
+
+    setTimeout(() =>{
+
+        window.location.replace('homem_aranhaNetflix.html')
+
+    },1000)
+    
+})    
+    
+    var NeedSpeed = document.getElementById('NeedSpeed')
+    var NeedSpeedT = document.getElementById('NeedSpeedT')
+
+    NeedSpeed.addEventListener('mouseover', () =>{
+
+        NeedSpeed.setAttribute('style', 'border: 1px solid white')
+        NeedSpeedT.setAttribute('style', 'text-decoration: underline')
+
+  })
+
+    NeedSpeed.addEventListener('mouseleave',() =>{
+    
+        NeedSpeed.setAttribute('style', 'border: none')
+        NeedSpeedT.setAttribute('style', 'text-decoration: none')
+        
+  })
+
+  NeedSpeed.addEventListener('click',()=>{
+    
+
+    setTimeout(() =>{
+
+        window.location.replace('need_for_speedNetflix.html')
+
+    },1000)
+    
+})    
+    
+  
+  
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+</body>
+</html>

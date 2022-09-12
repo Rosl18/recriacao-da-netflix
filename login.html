@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="shortcut icon" href= "fotos/favicon.ico">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-image: url(fotos/tela\ de\ fundo\ \(netflix\).jpg);
+        }
+        .gradient{ 
+            background: rgba(0, 0, 0, 0.4);
+            background-image: linear-gradient(
+             to top,
+             rgba(0, 0, 0, 0.8) 0,
+             rgba(0, 0, 0, 0) 60%,
+             rgba(0, 0, 0, 0.8) 100%
+            );
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+        .card{
+        padding: 60px;
+        z-index: 90;
+        position: relative;
+        max-width: 450px;
+        height: 550px;
+        margin-left: 50%;
+        background-color: rgb(0, 0, 0, 0.75);
+        border-radius: 10px;
+        box-sizing: border-box;
+        transform: translateX(-50%);   
+        }
+        .card > h2{
+            position: relative;
+            right: 0px;
+            bottom: 20px;
+            font-size: 40px;
+            margin: 0;
+            color: #fff;       
+        }
+        .textfloat{
+            position: relative;
+            padding-top: 13px;
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
+        .textfloat > input{
+            height: 50px;
+            width: 100%;
+            color: #fff;
+            background-color: #333;
+            border: none;
+            border-radius: 5px;
+            padding-left: 15px;
+            box-sizing: border-box;
+            outline: none;
+        }
+        .textfloat >input:focus{
+            border-bottom: 2px solid #fff;
+        }
+        .textfloat > label{
+            color: #444;
+            pointer-events: none;
+            font-size: 20px;
+            position: absolute;
+            top: 12px;
+            left: 5px;
+            margin-top: 13px;
+            transition: all .3s ease-out;
+        } 
+        .textfloat >input:focus + label,
+        .textfloat >input:valid + label{
+            font-size: 20px;
+            margin-top:-22px;
+            color: #fff;
+        }
+        #netLogo{
+            z-index: 90;
+            position: relative;
+            top: 10px;
+            left: 10px;
+        }
+        #entrar{
+            position: relative;
+            top: 10px;
+            left: 50px;
+            width: 250px;
+            padding: 15px 12px;
+            font: 16px arial;
+            background: #E50914;
+            color: #fff;
+            cursor: pointer;
+        }
+        #entrar:hover{
+            background: red;
+        }
+    #marcacao{
+            background: white;
+            position: relative;
+            top: 70px;
+            right: 250px;
+        }    
+        .LM{
+            color: #B3B3B3;
+            position: relative;
+            top: 33px;
+            left: 28px;
+        }
+        .ajuda{
+            position: absolute;
+            top: 66.5%;
+            left: 67.5%;  
+        }
+        .ajuda > a{
+            color: #B3B3B3;
+            text-decoration: none;
+        }
+        .ajuda>a:hover{
+            text-decoration: underline;
+        }
+        .msg{
+            position: relative;
+            top: 65px;
+            color: #737373;
+            font-size: 16px;
+        }
+        .msgL{
+            position: relative;
+            top: 46px;
+            left: 110px;
+            text-decoration: none;
+            color: #ffffff;
+        }
+        .msgL:hover{
+            text-decoration: underline;
+        }
+
+</style>
+
+</head>
+<body>
+    
+<div class="titulo">
+        <a href="index.html"><img id="netLogo" src="fotos/netflixlogo.png" alt=" " width="200"></a>
+</div>
+
+<div class="card">  
+    <h2>Entrar</h2>
+    
+    <div class="textfloat">
+       <input type="text" id="nome" placeholder=" " required>
+       <label id="label-nome" for="nome">Digite o seu e-mail</label>
+    </div>
+    
+    <div class="textfloat">
+        <input type="password" id="senha" placeholder=" " required >
+        <label id="label-senha" for="senha">Senha</label>
+    </div>
+    
+    <button type="button" id="entrar">Entrar</button> 
+    <input type="checkbox" id="marcacao">
+    <p class="LM">Lembre de mim</p>
+    <p class="ajuda"><a href="#">Precisa de ajuda?</a></p>
+    <p class="msg">Novo por aqui? </p>
+    <a class="msgL" href="tela_de_cadastro.html">Assine agora.</a>
+</div>
+    
+<div class="gradient"></div>
+
+</body>
+</html>

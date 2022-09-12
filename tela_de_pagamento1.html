@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="icon" href= "fotos/favicon.ico">
+<style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #logo{
+            position: absolute;
+            top: 2%;
+            left: 2%;
+        }
+        #entra{
+            font: 25px "Netflix Sans";
+            position: absolute;
+            left: 91.5%;
+            top: 5%;
+            text-decoration: none;
+            color: black;
+        }
+        #entra:hover{
+            text-decoration: underline;
+        }
+        .linha{
+           background: gainsboro;
+           height: 1px;
+           position: relative;
+           top: 90px;
+        }
+       .qrCode{
+            position: absolute;
+            left: 51%;
+            top: 40%;
+            transform: translate(-50%,-50%);           
+        }
+       .pixLogo{
+           position: absolute;
+           top: 20%;
+           left: 50%;
+           transform: translate(-50%,-50%);
+        }
+        #qrCode{
+        position: absolute;
+        left: 47%;
+        top: 60%;
+        transform: translate(-50%,-50%);
+        font: 20px "Netflix Sans","Helvetica Neue","helvetica";
+        color: green;
+        cursor: pointer;
+        }
+       #qrCode:hover{
+           text-decoration: underline;
+        }
+       .traco{
+        position: absolute;
+        left: 50.7%;
+        top: 59.5%;
+        transform: translate(-50%,-50%);
+        font: 25px "Netflix Sans","Helvetica Neue","helvetica";
+        }
+        #chave{
+        position: absolute;
+        left: 54%;
+        top: 60%;
+        transform: translate(-50%,-50%);
+        font: 20px "Netflix Sans","Helvetica Neue","helvetica";
+        cursor: pointer;
+        }
+       #chave:hover{
+           text-decoration: underline;
+        }
+       .texto{
+        position: absolute;
+        left: 35%;
+        top: 70%;
+        font: 20px "Netflix Sans","Helvetica Neue","helvetica";
+        }
+       .email{
+           color: #E50914;
+        }
+       .chave{
+        position: absolute;
+        left: 51%;
+        top: 40%;
+        transform: translate(-50%,-50%);
+        border: 2px solid rgba(128, 128, 128, 0.356);
+        height: 50px;
+        width: 400px;
+        display: none;
+        }
+       .Chave{
+        position: absolute;
+        left: 51%;
+        top: 40%;
+        transform: translate(-50%,-50%);
+        display: none;
+        } 
+       .avancar{
+        font: 12px "Netflix Sans","Helvetica Neue","helvetica"; 
+        }
+       .plano{
+        position: absolute;
+        top: 7%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font: 12px "Netflix Sans","Helvetica Neue","helvetica";
+        }
+</style>
+</head>
+<body>
+
+<div class="topo">
+    <a id="logo" href="#"><img src="fotos/netflixlogo.png" alt=" " width="167" height="57"></a>
+    <a id="entra" href="tela_de_pagamento.html">Voltar</a>
+</div> 
+
+<div
+    class="linha">
+</div>
+
+<div class="QRCODE">
+    <img class="pixLogo" src="fotos/logoPix.png" alt=" " width="140">
+        <img class="qrCode" src="fotos/QRCODE.jpeg" alt=" " width="200">
+            <p id="qrCode">Qrcode</p>
+        <p class="traco">|</p>
+            <p id="chave">Chave</p>
+     <p class="texto">
+        - Apos efetuar o pagamento, enviar o comprovante <br>para o nosso email
+            <a class="email" href="#">ronlima2004@gmail.com</a>. E aguardar ser <br>liberado para entrar 
+             no site. <a class="avancar" href="tela_de_carregamento.html">Avançar</a>   
+     </p>
+     <div class="chave"></div>
+        <p class="Chave"><strong>214eaf9d-655f-4984-a0a8-0b832fc17497</strong> </p>        
+</div>
+    
+<script>
+
+var qrCode = document.querySelector('#qrCode')
+var chave = document.querySelector('#chave')
+var chaveFundo = document.querySelector('.chave')
+var chaveAleatoria = document.querySelector('.Chave')
+var qrCodeImage = document.querySelector('.qrCode')
+
+    chave.addEventListener('click', () =>{
+        chave.setAttribute('style','color : green')
+        qrCode.setAttribute('style','color : black')
+        qrCodeImage.style.display = 'none'
+        chaveFundo.style.display = 'flex'
+        chaveAleatoria.style.display = 'flex'    
+}) 
+    qrCode.addEventListener('click', () =>{
+        qrCode.setAttribute('style', 'color : green')
+        chave.setAttribute('style','color : black')
+        qrCodeImage.style.display = 'flex'
+        chaveFundo.style.display = 'none'
+        chaveAleatoria.style.display = 'none '
+})
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+    

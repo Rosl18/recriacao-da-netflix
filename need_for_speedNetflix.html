@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="shortcut icon" href= "fotos/favicon.ico">
+    <style>
+        *{
+        margin: 0;
+        padding: 0;
+      }
+      body{
+        background-image: url(fotos/cartaz-de-need-for-speed.jpg);
+        background-size: 1275px;
+        background-position-x: 6px;
+        background-repeat: no-repeat;
+      }
+      .gradient{
+        background: rgba(0, 0, 0, 0.2);
+        background-image: linear-gradient(
+        to left,
+        rgba(0, 0, 0, 0.8) 0,
+        rgba(0, 0, 0, 0) 0,
+        rgba(0, 0, 0, 0.8) 100%
+        ); 
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+      .logo-N{
+        z-index: 90;
+        position: absolute;
+        top: 3%;
+        left: 2%;
+        cursor: pointer;
+      }
+      #logo-ND{
+        z-index: 90;
+        position: relative;
+        right: 30px;
+        top: 15px;
+        border-radius: 500px;
+        cursor: pointer;
+      }
+      .Seta-Baixo{
+        z-index: 90;
+        position: absolute;
+        left: 98.3%;
+        top: 3.7%;
+      }
+      .titulo{
+        z-index: 90;
+        position: absolute;
+        top: 20%;
+        left: 5%;
+        color: white;
+        font: 40px "Netflix Sans","Helvetica Neue","helvetica";
+      }
+      .texto{
+        z-index: 90;
+        position: absolute;
+        top: 35%;
+        left: 5%;
+        color: white;
+        font: 15px "Netflix Sans","Helvetica Neue","helvetica";
+      }
+      #assistir{
+      z-index: 90;
+      position: absolute;
+      top: 55%;
+      left: 6%;
+      width: 120px;
+      height: 30px;
+      padding: 10px 10px 30px 30px;
+      font: 15px "Netflix Sans","Helvetica Neue","helvetica";
+      background: transparent;
+      border: 1px solid white;
+      color: white;
+      cursor: pointer;
+      transition: 0.4s;
+      }
+      #assistir:hover{
+        background: white;
+        color: black;
+      }
+      .iconsPlay{
+        z-index: 90 ;
+        position: absolute;
+        top: 55.7%;
+        left: 7%;
+      }
+      #trailer{
+        z-index: 90;
+        position: absolute;
+        top: 55%;
+        left: 16%;
+        width: 120px;
+        height: 30px;
+        padding: 10px 10px 30px 30px;
+        font: 15px "Netflix Sans","Helvetica Neue","helvetica";
+        background: transparent;
+        border: 1px solid white;
+        color: white;
+        cursor: pointer;
+        transition: 0.4s;
+      }
+      #trailer:hover{
+        background: white;
+        color: black;
+      }   
+      .iconsTrailer{
+        z-index: 90 ;
+        position: absolute;
+        top: 55.7%;
+        left: 17%;
+      }
+      .card{
+        z-index: 90;
+        background: black;
+        height: 250px;
+        width: 170px;
+        position: absolute;
+        top: 11%;
+        left: 83.5%;
+        border: 1px solid rgba(128, 128, 128, 0.493);
+        display: none;
+      }     
+      .card>hr{
+        position: absolute;
+        top: 80%;
+        width: 168px;
+        border-color: rgba(128, 128, 128, 0.493);
+      }
+      #logo-NDUSU{
+        position: absolute;
+        top: 5.7%;
+        left: 7%;
+        border-radius: 50px;
+      }
+      .logo-NDUSU{
+        color: green;
+        font: 12px "Netflix Sans","Helvetica Neue","helvetica";
+        position: absolute;
+        top: 8%;
+        left: 29%;
+        cursor: pointer;
+      }
+      .logo-NDUSU:hover{
+        text-decoration: underline;
+      }
+      .setaParaCima{
+        z-index: 90;
+        position: absolute;
+        top: 9.9%;
+        left: 95.5%;
+        display: none;
+      }
+      .sairNetflix{
+        position: absolute;
+        top: 87%;
+        left: 6%;
+        width: 200px;
+        color: white;
+        cursor: pointer;
+        font: 13px "Netflix Sans","Helvetica Neue","helvetica";
+      }
+      .sairNetflix:hover{
+        text-decoration: underline;
+      }
+      #logo-USU{
+        position: absolute;
+        top: 25%;
+        left: 3%;
+      }
+      .logo-USU{
+        color: white;
+        font: 10px "Netflix Sans","Helvetica Neue","helvetica";
+        position: absolute;
+        left: 26%;
+        top: 25%;
+        cursor: pointer;
+      }
+      .logo-USU:hover{
+        text-decoration: underline;
+      }
+</style>
+
+</head>
+<body>
+
+<div class="conteudo">
+    <h1 class="titulo">Need For Speed – O Filme</h1>
+    <p class="texto">Aaron Paul (Breaking Bad) e Dominic Cooper (Capitão América), são os principais personagens do longa de ação,<br> que promete muita velocidade.
+        Tobey Marshall (Aaron) é um piloto que foi traído por seu rico e arrogante sócio Dino (Dominic)<br> e acabou sendo preso. Ele começa a articular uma vingança depois de finalmente ganhar liberdade. Porém,<br> seu ex-parceiro descobre o plano e decide colocar a cabeça de Tobey à prêmio. Isso obriga o corredor a participar de um circuito de <br>corridas ilegais por todo país, usando carros superpotentes.</p>
+    <img class="logo-N" src="fotos/netflixlogo.png" alt=" " width="170">
+    <button type="button" id="assistir">Assistir</button>
+    <img class="iconsPlay" src="fotos/Icone-Play.png" alt=" " width="30">
+    <button type="button" id="trailer">Trailer</button>
+    <img class="iconsTrailer" src="fotos/Icone-Play.png" alt=" " width="30">
+</div>
+   
+<div class="usuarios">
+    <img id="logo-ND" src="fotos/needForSpeed.jpg" alt=" " width="25" height="35px" align="right">
+    <img class="Seta-Baixo" src="fotos/seta-Baixo - Copy.png" alt=" " width="12">
+</div>  
+   <img class="setaParaCima" src="fotos/seta-Baixo.png" alt=" " width="15">
+   <div class="card">
+    <img id="logo-NDUSU" src="fotos/needForSpeed.jpg" alt=" " width="25">
+    <p class="logo-NDUSU">Need For Speed - O filme</p>
+    <img id="logo-USU" src="fotos/logo_Homem-Aranha.jfif" alt=" " width="35">
+    <p class="logo-USU">Homem-Aranha sem volta <br>pra casa</p>
+    <p class="sairNetflix"><b>Sair da Netflix</b></p>
+    <hr>
+</div>
+   <div class="gradient"></div>
+<script>
+    var setaParaCima = document.querySelector('.setaParaCima')
+    var card = document.querySelector('.card')
+    var logoND = document.querySelector('#logo-ND')
+    var menuopen = false;
+
+    logoND.addEventListener('click',() => {
+      if(!menuopen) {
+          card.style.display = 'flex';
+          setaParaCima.style.display = 'flex'
+          menuopen = true;
+      } else{
+          card.style.display = 'none';
+          setaParaCima.style.display = 'none'
+          menuopen = false;
+      }
+    })
+    var trailer = document.querySelector('#trailer')
+      trailer.addEventListener('click',() =>{
+      trailer.setAttribute('style','background: green')
+        setTimeout(() =>{
+          window.location.replace('trailer-ND.html')
+        },1000)
+    })
+    var button_TEXTO = document.querySelector('.logo-USU')
+      button_TEXTO.addEventListener('click',() =>{
+        setTimeout(() =>{
+            window.location.replace('homem_aranhaNetflix.html')
+        })
+    })
+    var button_SAIRNETFLIX = document.querySelector('.sairNetflix')
+      button_SAIRNETFLIX.addEventListener('click',() =>{
+        setTimeout(() =>{
+            window.location.replace('index.html')
+        })
+      })
+    var assistir = document.querySelector('#assistir')
+      assistir.addEventListener('click', () =>{
+      assistir.setAttribute('style','background: green')
+        setTimeout(() =>{
+          window.location.replace('filme_ND.html')
+        },1500)
+     })          
+</script>
+    
+</body>
+</html>
